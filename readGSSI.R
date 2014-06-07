@@ -1,3 +1,7 @@
+#this script was translated from readgssi.m, a matlab script 
+#found available online
+#R code by H. Dugan June 7, 2014
+
 readgssi <- function(name) {
 
   fid = file(name,'rb') #connect to file
