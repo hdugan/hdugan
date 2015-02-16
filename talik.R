@@ -22,4 +22,11 @@ talik <- function(radius, maat = -19, mabt = 25, geoZ = 50, maxdepth = 2000) {
   return(talik)
 }
 
+plotTalik <- function(talik) {
+  par(mar = c(3,3,0.2,1),mgp=c(1.5,0.8,0),tck=-0.02,cex=0.8,
+      cex.axis=0.8,cex.lab=0.8)
+  plot(talik$temp,talik$depth,ylim=rev(range(talik$depth)),
+       pch=16, type='o',
+       ylab='depth (m)',xlab='temperature (degC) ')
+}
 
