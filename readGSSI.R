@@ -1,6 +1,7 @@
 #this script was translated from readgssi.m, a matlab script 
 #found available online
 #R code by H. Dugan June 7, 2014
+#Need R version R 3.0.0 or higher
 
 #The function of this script is to obatin the header and data 
 #form a .DZT file. This is the output of radar files associated
@@ -28,14 +29,10 @@ readgssi <- function(name) {
   rh[['range']] = readBin(fid,double(),size=4)
   rh[['npass']] = readBin(fid,integer(),size=2,signed="FALSE")
   
-
-  #create = list()
-  #create[['sec2']] = readBin(fid,integer(),n=4,size=2)
   createTime = readBin(fid,integer(),size=4,n=1)
   
   #bitint function supplied by Matthew Lundberg
   #http://stackoverflow.com/questions/24101150/read-integers-from-binary-8-bits-in-r
-  
   bitint <- function(x, bitlens) {
     result <- integer(length(bitlens))
     for (i in seq_along(bitlens)) {
