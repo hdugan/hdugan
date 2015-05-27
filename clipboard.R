@@ -1,4 +1,5 @@
-#function to export to clipboard
+# Function to export to clipboard
+# Default is for 'space separated'. Set csv = T for comma separated 
 clipboard <- function(df,csv=FALSE) {
   clip <- pipe("pbcopy", "w")
   if (csv == F) {
