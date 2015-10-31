@@ -1,4 +1,7 @@
-## Function that creates camelCase text from strings
+# Function that capitalizes the first letter of each word
+# Options:
+# Strict: TRUE:remove capital letters mid word
+# Space: TRUE:keep space between words, FALSE: remove space between words
 capwords <- function(s, strict = FALSE, space = FALSE) {
   cap <- function(s) paste(toupper(substring(s, 1, 1)),{
     s <- substring(s, 2); if(strict) tolower(s) else s},
