@@ -20,7 +20,7 @@ allNames = cols[!grepl('1',cols) & !grepl('2',cols) & !grepl('3',cols) & !grepl(
 indx = match(dupNames,allNames)
 
 # Output color table 
-output = data.frame(col = cols,c1=NA,c2=NA,c3=NA,c4=NA,stringsAsFactors = F)
+output = data.frame(col = allNames,c1=NA,c2=NA,c3=NA,c4=NA,stringsAsFactors = F)
 for (i in 1:4){
   output[,i+1][indx] = dupCols[[i]]
 }
