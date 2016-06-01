@@ -1,5 +1,10 @@
-
 #### Make 2-page color table of all colors available in R ####
+# R color convention is color, color1, color2, color3, and color4
+# with shades getting progressively darker
+# For example skyblue, skyblue1, skyblue2, skyblue3, skyblue4
+# This table prints only the full name, and fullname4 if available
+# This table does not show greyscale colors grey0:grey100
+
 # R colors minus 100 shades of grey 
 cols = colors()[c(2:151,362:657)]
 
