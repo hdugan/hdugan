@@ -20,7 +20,7 @@ for (i in 1:4){
   output[,i+1][indx] = dupCols[[i]]
 }
 
-# Set rectangles x start and end points 
+# Set rectangles x-axis start and end points 
 x1 = c(0,3,3.5,4,4.5)
 x2 = c(3,3.5,4,4.5,5)
 
@@ -30,7 +30,7 @@ par(mar=c(0,6,0,6))
 # First page
 plot(0, type="n", ylab="", xlab="",axes=FALSE, ylim=c(69,0), xlim=c(1,5))
 axis(2,at = 1:69,labels = allNames[1:69],las=1,cex.axis=0.6)
-axis(4,at= indx[indx<70],labels = allNames[indx[indx<70]],cex.axis=0.6,las=1)
+axis(4,at= indx[indx<70],labels = paste(allNames[indx[indx<70]],4,sep=''),cex.axis=0.6,las=1)
 for (j in 1:69) {
   for (i in 1:5) {
     #k = j*5 + i
@@ -42,7 +42,7 @@ for (j in 1:69) {
 # Second Page 
 plot(0, type="n", ylab="", xlab="",axes=FALSE, ylim=c(138,70),xlim=c(1,5))
 axis(2,at = 70:138,labels = allNames[70:138],las=1,cex.axis=0.6)
-axis(4,at= indx[indx>=70],labels = allNames[indx[indx>=70]],cex.axis=0.6,las=1)
+axis(4,at= indx[indx>=70],labels = paste(allNames[indx[indx>=70]],4,sep=''),cex.axis=0.6,las=1)
 for (j in 70:138) {
   for (i in 1:5) {
     #k = j*5 + i
